@@ -16,15 +16,15 @@ $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 if (!$conn) {
 	die ('Gagal terhubung MySQL: ' . mysqli_connect_error());	
 }
-
-//$eeq = $argv;
-//$response = explode(":",$eeq[1]);
-//$id  = $response[0];
-//$alat = $response[1];
-//$uid = hexdec($id);
-
-$uid = '1581542966';
-$alat = '3';
+//Raspberry Input / Serial RFID Input
+$eeq = $argv;
+$response = explode(":",$eeq[1]);
+$id  = $response[0];
+$alat = $response[1];
+$uid = hexdec($id);
+//Manual Input
+//$uid = '1581542966';
+//$alat = '3';
 echo "in dec : ";
 echo ($uid);
 echo " alat no: ";
